@@ -1,0 +1,35 @@
+<!-- pages/test/test.wxml -->
+<!-- <view class="test">
+    <!<text>我是view标签</text> -->
+<!-- <button type="primary" size="mini" bindtap="clictBtn" data-sex="男" data-name="张三">我是按钮</button> -->
+<!-- <view>
+        <view wx:for="{{shopCar}}" wx:key="{{index}}">姓名：{{item.name}}；性别：{{item.sex}}</view>
+    </view> -->
+<!-- <view>我叫：{{name}}</view>
+     <button type="primary" bindtap="changeName">点我修改姓名</button>
+</view> -->
+<view>
+    <view class="item">
+        <view class="th">商品名</view>
+        <view class="th">单价</view>
+        <view class="th">数量</view>
+        <view class="th">小计</view>
+        <view class="th">操作</view>
+    </view>
+    <view class="item" wx:for="{{shopCar}}" wx:key="{{index}}">
+        <view class="th">{{item.name}}</view>
+        <view class="th">{{item.price}}</view>
+        <view class="th num-wrapper">
+            <button size="mini" disabled="{{item.num === 1}}" bindtap="changeNum" data-index="{{index}}" data-num="{{-1}}">
+                -
+            </button>
+            <text>{{item.num}}</text>
+            <button size="mini" bindtap="changeNum" data-index="{{index}}" data-num="{{1}}">+</button>
+        </view>
+        <view class="th">{{item.price * item.num}}</view>
+        <view class="th">
+            <button size="mini" bindtap="del" data-index="{{index}}">删除</button>
+        </view>
+    </view>
+    <view>总价:{{total}}</view>
+</view>

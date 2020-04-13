@@ -1,0 +1,39 @@
+ 
+  
+
+ .thead{
+     display: flex;
+     text-align: center;
+     justify-content: space-between;
+ }
+
+ .thead view{
+     flex: 1;
+     text-align: center;
+ }
+
+ .tbody .tr{
+     display: flex;
+     justify-content: space-between;
+     
+ }
+ .tbody .tr view{
+      float: 1;
+      text-align: center;
+ }
+
+ .tbody .tr .xj{
+     display: flex;
+     justify-content: space-around;
+ }
+ .xj button{
+     flex: 1;
+ }
+ .xi input{
+     float: 2;
+ }
+
+ .tbody view button{
+     padding: 0;
+
+ }
